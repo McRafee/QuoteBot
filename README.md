@@ -1,6 +1,6 @@
 # QuoteBot
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) | [![Discord](https://img.shields.io/badge/Discord-Bot-7289DA)](https://discord.com/) | [![Telegram](https://img.shields.io/badge/Telegram-Bot-2CA5E0)](https://telegram.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Discord](https://img.shields.io/badge/Discord-Bot-7289DA)](https://discord.com/) [![Telegram](https://img.shields.io/badge/Telegram-Bot-2CA5E0)](https://telegram.org/)
 
 ---
 
