@@ -50,7 +50,7 @@ Follow these steps to set up and run QuoteBot on your local machine:
 1. **Clone the repository:** Start by cloning this repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/your-username/quotebot.git
+   git clone https://github.com/McRafee/quotebot.git
    ```
 
 2. **Install dependencies:** Navigate to the project directory and install the necessary dependencies using Composer. Run the following command:
