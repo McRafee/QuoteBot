@@ -4,7 +4,6 @@ require_once __DIR__ . '../../../vendor/autoload.php';
 require_once __DIR__ . '../../../database/database_setup.php';
 
 use Longman\TelegramBot\Request;
-use PDO;
 use Dotenv\Dotenv;
 
 // Load the environment variables from .env file
@@ -17,7 +16,7 @@ $token = $_ENV['TELEGRAM_BOT_TOKEN'];
 // Function to get a random quote from the database
 function getRandomQuote()
 {
-    $pdo = new PDO('sqlite:../../../database/quotes.db');
+    $pdo = new PDO('sqlite:../../database/quotes.db');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $stmt = $pdo->query("SELECT quote FROM quotes ORDER BY RANDOM() LIMIT 1");
@@ -25,7 +24,7 @@ function getRandomQuote()
 
     return $randomQuote;
 }
-
+//echo (getRandomQuote());
 // Handle incoming updates
 $update = json_decode(file_get_contents('php://input'), true);
 
