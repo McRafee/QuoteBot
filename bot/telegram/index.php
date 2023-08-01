@@ -1,14 +1,14 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../database_setup.php';
+require_once __DIR__ . '../../../vendor/autoload.php';
+require_once __DIR__ . '../../../database/database_setup.php';
 
 use Longman\TelegramBot\Request;
 use PDO;
 use Dotenv\Dotenv;
 
 // Load the environment variables from .env file
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv = Dotenv::createImmutable(__DIR__ . '../../../');
 $dotenv->load();
 
 // Get the Telegram bot token from the environment variables
@@ -17,7 +17,7 @@ $token = $_ENV['TELEGRAM_BOT_TOKEN'];
 // Function to get a random quote from the database
 function getRandomQuote()
 {
-    $pdo = new PDO('sqlite:../database/quotes.db');
+    $pdo = new PDO('sqlite:../../../database/quotes.db');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $stmt = $pdo->query("SELECT quote FROM quotes ORDER BY RANDOM() LIMIT 1");
@@ -33,7 +33,7 @@ if (isset($update['message'])) {
     $chatId = $update['message']['chat']['id'];
     $command = $update['message']['text'];
 
-    if ($command === '/randomquote') {
+    if ($command === '/getquote') {
         $randomQuote = getRandomQuote();
 
         $data = [
